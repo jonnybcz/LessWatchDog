@@ -7,7 +7,7 @@ var colors = require("colors");
 var LessWatchDog = function(file, log){
 	this._file = file;
 	this._log = log;
-	this._regexForSearchLess = /@import \"(\w+\.less)"/m; //@todo lepsi regularku, // soubory musi mit priponu less! nejak upozornit uzivatele
+	this._regexForSearchLess = /@import \"([\w-\.\/]+\.less)"/m;
 	this._watchedFiles = [file];
 	this._lastChanges = [];
 
